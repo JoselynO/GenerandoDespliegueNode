@@ -9,11 +9,11 @@ services:
     enviroment:
       - MONGO_INITDB_ROOT_USERNAME=${MONGO_ROOT_USER}
       - MONGO_INITDB_ROOT_PASSWORD=${MONGO_ROOT_PASSWORD}
-      - MONGO_INITDB_ROOT_DATABASE=${MONGO_DATABASE}
+      - MONGO_INITDB_DATABASE=${MONGO_DATABASE}
     ports:
       -27018:27017
     volumes:
-      - ./database:/data/tb
+      - database:/data/tb
     networks:
      - network-despliegue
 
